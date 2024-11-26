@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:second_app/views/area_of_circle_view.dart';
+import 'package:second_app/views/arithemetic_view.dart';
 import 'package:second_app/views/simple_interest_view.dart';
 
 class DashboardView extends StatelessWidget {
@@ -16,6 +17,17 @@ class DashboardView extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
         child: ListView(
           children: [
+            DashboardButton(
+              label: 'Arithmetic',
+              icon: Icons.calculate,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const ArithmeticView()),
+                );
+              },
+            ),
+            const SizedBox(height: 20),
             DashboardButton(
               label: 'Simple Interest',
               icon: Icons.monetization_on_outlined,
