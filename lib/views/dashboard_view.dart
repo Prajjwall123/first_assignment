@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:second_app/views/area_of_circle_view.dart';
 import 'package:second_app/views/simple_interest_view.dart';
 
 class DashboardView extends StatelessWidget {
@@ -22,6 +23,17 @@ class DashboardView extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (_) => const SimpleInterestView()),
+                );
+              },
+            ),
+            const SizedBox(height: 20),
+            DashboardButton(
+              label: 'Area of Circle',
+              icon: Icons.circle_outlined,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const AreaOfCircleView()),
                 );
               },
             ),
